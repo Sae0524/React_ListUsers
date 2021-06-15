@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import "./styles.css";
+
+import Contacts from "./contacts";
+import AddContact from "./AddContact";
+import { Provider } from "./context"; // Import Provider from Context.js
+
+//import AddContact from "./AddContact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //We need to wrap everything inside the Provider Component.
+    <Provider>
+      <AddContact />
+      <Contacts />
+    </Provider>
   );
 }
-
 export default App;
